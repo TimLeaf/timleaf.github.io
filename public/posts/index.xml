@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>List on TimLeaf</title>
+    <link>http://example.org/posts/</link>
+    <description>Recent content in List on TimLeaf</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 24 Jan 2022 00:00:00 -0900</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた</title>
+      <link>http://example.org/posts/2022/run-dbscan-in-dataflow-custom-container/</link>
+      <pubDate>Mon, 24 Jan 2022 00:00:00 -0900</pubDate>
+      
+      <guid>http://example.org/posts/2022/run-dbscan-in-dataflow-custom-container/</guid>
+      <description>背景 Dataflow now supports custom containers in GA. ※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。 になってから、</description>
+    </item>
+    
+    <item>
+      <title>BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限</title>
+      <link>http://example.org/posts/2021/device-restriction-by-beyondcorp/</link>
+      <pubDate>Fri, 19 Nov 2021 00:00:00 -0900</pubDate>
+      
+      <guid>http://example.org/posts/2021/device-restriction-by-beyondcorp/</guid>
+      <description>BeyondCorp Enterprise とは Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterpris</description>
+    </item>
+    
+    <item>
+      <title>BigQueryロードする前の文字コード変換</title>
+      <link>http://example.org/posts/2021/convert-encoding-before-bq-load/</link>
+      <pubDate>Mon, 15 Nov 2021 00:00:00 -0900</pubDate>
+      
+      <guid>http://example.org/posts/2021/convert-encoding-before-bq-load/</guid>
+      <description>背景 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ド</description>
+    </item>
+    
+    <item>
+      <title>オンプレミス環境からGCSバケットにファイルのアップロード、最小権限の設定について</title>
+      <link>http://example.org/posts/2020/upload-to-gcs-from-on-premise-with-polp/</link>
+      <pubDate>Sat, 26 Dec 2020 00:00:00 -0900</pubDate>
+      
+      <guid>http://example.org/posts/2020/upload-to-gcs-from-on-premise-with-polp/</guid>
+      <description>背景 エンドユーザーはオンプレミス環境から GCS バケットへファイルアップロードしたいという要望がありますが、情報はこれだけで、直接に聞くのも難しか</description>
+    </item>
+    
+    <item>
+      <title>「Terraform」作成した GCE インスタンス中で、GitHub プライベートリポジトリからソースを落とす</title>
+      <link>http://example.org/posts/2020/github-clone-private-repo-to-gce-instance/</link>
+      <pubDate>Sun, 05 Jul 2020 00:00:00 -0900</pubDate>
+      
+      <guid>http://example.org/posts/2020/github-clone-private-repo-to-gce-instance/</guid>
+      <description>背景 Terraform を利用して GCP などのリソースを簡単に apply・destroy できるから、必要となる時に、GCE インスタンスを作って、GitHub 上のプ</description>
+    </item>
+    
+    <item>
+      <title>家に帰ったら、玄関のライトを自動に付けたい</title>
+      <link>http://example.org/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/</link>
+      <pubDate>Sun, 19 Apr 2020 00:00:00 -0900</pubDate>
+      
+      <guid>http://example.org/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/</guid>
+      <description>背景 東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。 前に住んだマンションは、玄関に人感知ライトがついていました。 ほ、ほしい</description>
+    </item>
+    
+    <item>
+      <title>Google Cloud Composer で Bigquery にロード時 「Error: Bad character (ASCII 0) encountered.」の回避策</title>
+      <link>http://example.org/posts/2020/avoid-ascii-0-error-cloud-composer/</link>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 -0900</pubDate>
+      
+      <guid>http://example.org/posts/2020/avoid-ascii-0-error-cloud-composer/</guid>
+      <description>背景 GoogleCloudStorageToBigQueryOperator を使った csv ファイルを Bigquery にロードする処理で、下記のエラーが発生しました。 「Error while reading data, error message: Error detected while parsing row starting at position: XXX. Error: Bad character (ASCII 0) encount</description>
+    </item>
+    
+  </channel>
+</rss>

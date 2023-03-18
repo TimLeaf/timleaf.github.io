@@ -1,0 +1,13 @@
+.my_credentials {
+    display: inline-block;
+    margin: 1rem auto;
+    min-width: 230px;
+}
+
+.my_credentials img {
+    margin: auto!important;
+}
+
+.my_credentials figcaption {
+    text-align: center;
+}

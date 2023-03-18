@@ -1,0 +1,27 @@
+baseURL: https://timleaf.me/
+languageCode: ja
+defaultContentLanguage: ja
+hasCJKLanguage: true
+title: TimLeaf
+theme: "PaperMod"
+
+params:
+  defaultTheme: auto
+  homeInfoParams:
+    Title: TimLeaf
+    Content: Data Engineer @Fukuoka
+
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/TimLeaf"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/lei-jiang-rai-kyou"
+
+menu:
+  main:
+  - name: post
+    url: /posts/
+    weight: -110
+  - name: my credential
+    url: /pages/my-credentials/
+    weight: -100

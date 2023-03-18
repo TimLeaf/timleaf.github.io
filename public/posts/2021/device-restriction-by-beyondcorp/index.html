@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限 | TimLeaf</title>
+<meta name="keywords" content="">
+<meta name="description" content="BeyondCorp Enterprise とは Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterpris">
+<meta name="author" content="">
+<link rel="canonical" href="http://example.org/posts/2021/device-restriction-by-beyondcorp/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.b4022fd15822e5266604dee8edcac37b861d7460498995f217070f0a57e92ddf.css" integrity="sha256-tAIv0Vgi5SZmBN7o7crDe4YddGBJiZXyFwcPClfpLd8=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
+    onload="hljs.initHighlightingOnLoad();"></script>
+<link rel="icon" href="http://example.org/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
+<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --hljs-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><script src="https://kit.fontawesome.com/5fac740f53.js" crossorigin="anonymous"></script><meta property="og:title" content="BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限" />
+<meta property="og:description" content="BeyondCorp Enterprise とは Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterpris" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/2021/device-restriction-by-beyondcorp/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-19T00:00:00-09:00" />
+<meta property="article:modified_time" content="2021-11-19T00:00:00-09:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限"/>
+<meta name="twitter:description" content="BeyondCorp Enterprise とは Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterpris"/>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "List",
+      "item": "http://example.org/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限",
+      "item": "http://example.org/posts/2021/device-restriction-by-beyondcorp/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限",
+  "name": "BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限",
+  "description": "BeyondCorp Enterprise とは Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterpris",
+  "keywords": [
+    
+  ],
+  "articleBody": "BeyondCorp Enterprise とは Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterprise」のサービスを一般提供しました。 BeyondCorp Enterpriseは、以下４つのGoogle Cloudサービスの組み合わせて、セキュリティの向上につながるソリューションです。\nIdentity-Aware Proxy（IAP）によるGCPリソースの保護 App Engine、Compute Engine、Kubernetes Engine、オンプレミス環境で動くアプリケーションの保護 VMインスタンスへのSSH、RDP接続の保護 アクセスルールを定義するため、Access Context Manager（ACM）でアクセスレベルの作成 Identity and Access Management（IAM）条件の適用 ACMで作成したアクセスレベルをIAM条件に適用 Google Chrome拡張機能のEndpoint Verificationによるデバイス情報の収集 ---\n投稿先で全ての内容を読む... ",
+  "wordCount" : "411",
+  "inLanguage": "ja",
+  "datePublished": "2021-11-19T00:00:00-09:00",
+  "dateModified": "2021-11-19T00:00:00-09:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://example.org/posts/2021/device-restriction-by-beyondcorp/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "TimLeaf",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http://example.org/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://example.org/" accesskey="h" title="TimLeaf (Alt + H)">TimLeaf</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://example.org/posts/" title="post">
+                    <span>post</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://example.org/pages/my-credentials/" title="my credential">
+                    <span>my credential</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title">
+      BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限
+    </h1>
+    <div class="post-meta"><span title='2021-11-19 00:00:00 -0900 -0900'>11月 19, 2021</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="beyondcorp-enterprise-とは">BeyondCorp Enterprise とは<a hidden class="anchor" aria-hidden="true" href="#beyondcorp-enterprise-とは">#</a></h1>
+<p>Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterprise」のサービスを一般提供しました。 BeyondCorp Enterpriseは、以下４つのGoogle Cloudサービスの組み合わせて、セキュリティの向上につながるソリューションです。</p>
+<ul>
+<li>Identity-Aware Proxy（IAP）によるGCPリソースの保護
+<ul>
+<li>App Engine、Compute Engine、Kubernetes Engine、オンプレミス環境で動くアプリケーションの保護</li>
+<li>VMインスタンスへのSSH、RDP接続の保護</li>
+</ul>
+</li>
+<li>アクセスルールを定義するため、Access Context Manager（ACM）でアクセスレベルの作成</li>
+<li>Identity and Access Management（IAM）条件の適用
+<ul>
+<li>ACMで作成したアクセスレベルをIAM条件に適用</li>
+</ul>
+</li>
+<li>Google Chrome拡張機能のEndpoint Verificationによるデバイス情報の収集</li>
+</ul>
+<p>---</p>
+    <a class="readmore" href="https://dryaki.gicloud.co.jp/articles/device-restriction-by-beyondcorp"><i class="fa-solid fa-up-right-from-square"></i> 投稿先で全ての内容を読む...</a>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+    <span>&copy; 2023 <a href="http://example.org/">TimLeaf</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
