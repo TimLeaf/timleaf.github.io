@@ -3,6 +3,7 @@ title: "家に帰ったら、玄関のライトを自動に付けたい"
 date: 2020-04-19T00:00:00-09:00
 slug: auto-turn-on-light-by-ifttt-raspberry-pi
 draft: false
+disableRobots: true
 tag:
   - Cloud Functions
   - Raspberry Pi

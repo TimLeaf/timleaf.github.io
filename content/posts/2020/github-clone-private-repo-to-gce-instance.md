@@ -3,6 +3,7 @@ title: "「Terraform」作成した GCE インスタンス中で、GitHub プラ
 date: 2020-07-05T00:00:00-09:00
 slug: github-clone-private-repo-to-gce-instance
 draft: false
+disableRobots: true
 tag:
   - Terraform
   - Compute Engine

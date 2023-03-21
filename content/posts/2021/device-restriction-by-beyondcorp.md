@@ -3,6 +3,7 @@ title: "BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバ
 date: 2021-11-19T00:00:00-09:00
 slug: device-restriction-by-beyondcorp
 draft: false
+disableRobots: true
 tag:
   - BeyondCorp Enterprise
   - Access Context Manager

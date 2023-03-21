@@ -3,6 +3,7 @@ title: "オンプレミス環境からGCSバケットにファイルのアップ
 date: 2020-12-26T00:00:00-09:00
 slug: upload-to-gcs-from-on-premise-with-polp
 draft: false
+disableRobots: true
 tag:
   - Docker
   - Bash script
