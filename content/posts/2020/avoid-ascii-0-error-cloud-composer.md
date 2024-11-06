@@ -12,13 +12,13 @@ tag:
   - Null character
 ---
 
-# 背景
+## 背景
 
 GoogleCloudStorageToBigQueryOperator を使った csv ファイルを Bigquery にロードする処理で、下記のエラーが発生しました。
 
 > 「Error while reading data, error message: Error detected while parsing row starting at position: XXX. Error: Bad character (ASCII 0) encountered.」
 
-# 回避策
+## 回避策
 
 調べたところ、取込 csv ファイルに「[ヌル文字 - Wikipedia](https://ja.wikipedia.org/wiki/%E3%83%8C%E3%83%AB%E6%96%87%E5%AD%97)」が混入しました。
 

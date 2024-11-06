@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>List | TimLeaf</title>
 <meta name="keywords" content="">
 <meta name="description" content="List - TimLeaf">
 <meta name="author" content="">
-<link rel="canonical" href="http://example.org/posts/">
+<link rel="canonical" href="http://localhost:1313/posts/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b4022fd15822e5266604dee8edcac37b861d7460498995f217070f0a57e92ddf.css" integrity="sha256-tAIv0Vgi5SZmBN7o7crDe4YddGBJiZXyFwcPClfpLd8=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://example.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
-<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="http://example.org/posts/index.xml">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/posts/index.xml">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/posts/">
 <noscript>
     <style>
         #theme-toggle,
@@ -55,30 +56,9 @@
         }
 
     </style>
-</noscript><script src="https://kit.fontawesome.com/5fac740f53.js" crossorigin="anonymous"></script><meta property="og:title" content="List" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="http://example.org/posts/" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="List"/>
-<meta name="twitter:description" content=""/>
+</noscript><script src="https://kit.fontawesome.com/5fac740f53.js" crossorigin="anonymous"></script>
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "List",
-      "item": "http://example.org/posts/"
-    }
-  ]
-}
-</script>
 </head>
 
 <body class="list" id="top">
@@ -96,7 +76,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://example.org/" accesskey="h" title="TimLeaf (Alt + H)">TimLeaf</a>
+            <a href="http://localhost:1313/" accesskey="h" title="TimLeaf (Alt + H)">TimLeaf</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -118,16 +98,18 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="http://example.org/posts/" title="post">
+                <a href="http://localhost:1313/posts/" title="post">
                     <span class="active">post</span>
                 </a>
             </li>
             <li>
-                <a href="http://example.org/pages/my-credentials/" title="my credential">
+                <a href="http://localhost:1313/pages/my-credentials/" title="my credential">
                     <span>my credential</span>
                 </a>
             </li>
@@ -143,14 +125,42 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2>BigQuery 連携クエリ・外部データセットが使う Spanner トランザクションについて
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>背景 2024年4月のGoogle Cloud Next ‘24 Las Vegas Recapで言及されて以来、10月3日に、BigQuery external dataset を使って Spanner のデータセットをリンクする機能が Public Preview になったとリリースノートで発表されました。
+...</p>
+  </div>
+  <footer class="entry-footer">&lt;span title=&#39;2024-11-06 00:00:00 -0900 -0900&#39;&gt;2024年11月6日&lt;/span&gt;</footer>
+  <a class="entry-link" aria-label="post link to BigQuery 連携クエリ・外部データセットが使う Spanner トランザクションについて" href="http://localhost:1313/posts/2024/bigquery-federated-queries-external-dataset-with-spanner-transaction/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2>Spanner Change Streams to BigQuery: Spannerトランザクション処理はどう連携されるか？
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>背景 2022年5月28日にCloud Spanner Change StreamsがGA化してから、ヘビーなSpannerユーザーの私たちにとしては、とてもとても黙っているわけにはいきません。が、時の流れが早い…世の中には、サービスイメージをつかむための記事とCloud Skills Boostのラボがすでに存在しております。そのため、この記事は少し深いところ（Spannerトランザクション処理）を探ってみたいと思います。これからChange Streamsを検証してみたい方に少しでも役立てばいいなと思います。
+...</p>
+  </div>
+  <footer class="entry-footer">&lt;span title=&#39;2023-03-02 00:00:00 -0900 -0900&#39;&gt;2023年3月2日&lt;/span&gt;</footer>
+  <a class="entry-link" aria-label="post link to Spanner Change Streams to BigQuery: Spannerトランザクション処理はどう連携されるか？" href="http://localhost:1313/posts/2023/spanner-transaction-in-change-streams-to-bq/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2>DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた
     </h2>
   </header>
   <div class="entry-content">
-    <p>背景 Dataflow now supports custom containers in GA. ※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。 になってから、...</p>
+    <p>背景 Dataflow now supports custom containers in GA. ※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。
+になってから、もうすぐ半年が経ちます。一方、初心者にやさしいBigQuery MLのクラスタリングはK平均法（k-means）のみサポートしています。DBSCANはk-meansより優れるように見えますので、Dataflowカスタムコンテナで回してみることにしました。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2022-01-24 00:00:00 -0900 -0900'>1月 24, 2022</span></footer>
-  <a class="entry-link" aria-label="post link to DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた" href="http://example.org/posts/2022/run-dbscan-in-dataflow-custom-container/"></a>
+  <footer class="entry-footer">&lt;span title=&#39;2022-01-24 00:00:00 -0900 -0900&#39;&gt;2022年1月24日&lt;/span&gt;</footer>
+  <a class="entry-link" aria-label="post link to DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた" href="http://localhost:1313/posts/2022/run-dbscan-in-dataflow-custom-container/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -159,10 +169,11 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>BeyondCorp Enterprise とは Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterpris...</p>
+    <p>BeyondCorp Enterprise とは Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterprise」のサービスを一般提供しました。 BeyondCorp Enterpriseは、以下４つのGoogle Cloudサービスの組み合わせて、セキュリティの向上につながるソリューションです。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-11-19 00:00:00 -0900 -0900'>11月 19, 2021</span></footer>
-  <a class="entry-link" aria-label="post link to BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限" href="http://example.org/posts/2021/device-restriction-by-beyondcorp/"></a>
+  <footer class="entry-footer">&lt;span title=&#39;2021-11-19 00:00:00 -0900 -0900&#39;&gt;2021年11月19日&lt;/span&gt;</footer>
+  <a class="entry-link" aria-label="post link to BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限" href="http://localhost:1313/posts/2021/device-restriction-by-beyondcorp/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -171,10 +182,11 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>背景 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ド...</p>
+    <p>背景 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ドキュメントには、下記の文言が含まれています。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2021-11-15 00:00:00 -0900 -0900'>11月 15, 2021</span></footer>
-  <a class="entry-link" aria-label="post link to BigQueryロードする前の文字コード変換" href="http://example.org/posts/2021/convert-encoding-before-bq-load/"></a>
+  <footer class="entry-footer">&lt;span title=&#39;2021-11-15 00:00:00 -0900 -0900&#39;&gt;2021年11月15日&lt;/span&gt;</footer>
+  <a class="entry-link" aria-label="post link to BigQueryロードする前の文字コード変換" href="http://localhost:1313/posts/2021/convert-encoding-before-bq-load/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -183,10 +195,11 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>背景 エンドユーザーはオンプレミス環境から GCS バケットへファイルアップロードしたいという要望がありますが、情報はこれだけで、直接に聞くのも難しか...</p>
+    <p>背景 エンドユーザーはオンプレミス環境から GCS バケットへファイルアップロードしたいという要望がありますが、情報はこれだけで、直接に聞くのも難しかったです。 GCP プロジェクトは組織なしで作られていますが、Google Workspace を利用しているかどうか、Google アカウントを持っているかどうか、オンプレミス環境はどんな状況かなどなど、そういう要素に左右されないように、考えてみました。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-12-26 00:00:00 -0900 -0900'>12月 26, 2020</span></footer>
-  <a class="entry-link" aria-label="post link to オンプレミス環境からGCSバケットにファイルのアップロード、最小権限の設定について" href="http://example.org/posts/2020/upload-to-gcs-from-on-premise-with-polp/"></a>
+  <footer class="entry-footer">&lt;span title=&#39;2020-12-26 00:00:00 -0900 -0900&#39;&gt;2020年12月26日&lt;/span&gt;</footer>
+  <a class="entry-link" aria-label="post link to オンプレミス環境からGCSバケットにファイルのアップロード、最小権限の設定について" href="http://localhost:1313/posts/2020/upload-to-gcs-from-on-premise-with-polp/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -195,10 +208,11 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>背景 Terraform を利用して GCP などのリソースを簡単に apply・destroy できるから、必要となる時に、GCE インスタンスを作って、GitHub 上のプ...</p>
+    <p>背景 Terraform を利用して GCP などのリソースを簡単に apply・destroy できるから、必要となる時に、GCE インスタンスを作って、GitHub 上のプライベートリポジトリのソースをインスタンスで動かすという要望はありました。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-07-05 00:00:00 -0900 -0900'>7月 5, 2020</span></footer>
-  <a class="entry-link" aria-label="post link to 「Terraform」作成した GCE インスタンス中で、GitHub プライベートリポジトリからソースを落とす" href="http://example.org/posts/2020/github-clone-private-repo-to-gce-instance/"></a>
+  <footer class="entry-footer">&lt;span title=&#39;2020-07-05 00:00:00 -0900 -0900&#39;&gt;2020年7月5日&lt;/span&gt;</footer>
+  <a class="entry-link" aria-label="post link to 「Terraform」作成した GCE インスタンス中で、GitHub プライベートリポジトリからソースを落とす" href="http://localhost:1313/posts/2020/github-clone-private-repo-to-gce-instance/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -207,10 +221,14 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>背景 東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。 前に住んだマンションは、玄関に人感知ライトがついていました。 ほ、ほしい...</p>
+    <p>背景 東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。
+前に住んだマンションは、玄関に人感知ライトがついていました。
+ほ、ほしい
+揃ったもの SwitchBot: Amazon Link RaspberryPi 3 Nature Remo Google Cloud Platform Account LINE Developer Account IFTTT Account ---
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-04-19 00:00:00 -0900 -0900'>4月 19, 2020</span></footer>
-  <a class="entry-link" aria-label="post link to 家に帰ったら、玄関のライトを自動に付けたい" href="http://example.org/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/"></a>
+  <footer class="entry-footer">&lt;span title=&#39;2020-04-19 00:00:00 -0900 -0900&#39;&gt;2020年4月19日&lt;/span&gt;</footer>
+  <a class="entry-link" aria-label="post link to 家に帰ったら、玄関のライトを自動に付けたい" href="http://localhost:1313/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -219,15 +237,18 @@
     </h2>
   </header>
   <div class="entry-content">
-    <p>背景 GoogleCloudStorageToBigQueryOperator を使った csv ファイルを Bigquery にロードする処理で、下記のエラーが発生しました。 「Error while reading data, error message: Error detected while parsing row starting at position: XXX. Error: Bad character (ASCII 0) encount...</p>
+    <p>背景 GoogleCloudStorageToBigQueryOperator を使った csv ファイルを Bigquery にロードする処理で、下記のエラーが発生しました。
+「Error while reading data, error message: Error detected while parsing row starting at position: XXX. Error: Bad character (ASCII 0) encountered.」
+回避策 調べたところ、取込 csv ファイルに「ヌル文字 - Wikipedia」が混入しました。
+...</p>
   </div>
-  <footer class="entry-footer"><span title='2020-02-25 00:00:00 -0900 -0900'>2月 25, 2020</span></footer>
-  <a class="entry-link" aria-label="post link to Google Cloud Composer で Bigquery にロード時 「Error: Bad character (ASCII 0) encountered.」の回避策" href="http://example.org/posts/2020/avoid-ascii-0-error-cloud-composer/"></a>
+  <footer class="entry-footer">&lt;span title=&#39;2020-02-25 00:00:00 -0900 -0900&#39;&gt;2020年2月25日&lt;/span&gt;</footer>
+  <a class="entry-link" aria-label="post link to Google Cloud Composer で Bigquery にロード時 「Error: Bad character (ASCII 0) encountered.」の回避策" href="http://localhost:1313/posts/2020/avoid-ascii-0-error-cloud-composer/"></a>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="http://example.org/">TimLeaf</a></span>
+    <span>&copy; 2024 <a href="http://localhost:1313/">TimLeaf</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

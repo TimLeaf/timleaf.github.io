@@ -2,81 +2,146 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>TimLeaf</title>
-    <link>http://example.org/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on TimLeaf</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 24 Jan 2022 00:00:00 -0900</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Nov 2024 00:00:00 -0900</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BigQuery 連携クエリ・外部データセットが使う Spanner トランザクションについて</title>
+      <link>http://localhost:1313/posts/2024/bigquery-federated-queries-external-dataset-with-spanner-transaction/</link>
+      <pubDate>Wed, 06 Nov 2024 00:00:00 -0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2024/bigquery-federated-queries-external-dataset-with-spanner-transaction/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;2024年4月の&lt;a href=&#34;https://cloudonair.withgoogle.com/events/gc-updates?talk=optional1-2024&#34;&gt;Google Cloud Next &amp;lsquo;24 Las Vegas Recap&lt;/a&gt;で言及されて以来、10月3日に、BigQuery external dataset を使って Spanner のデータセットをリンクする機能が Public Preview になったとリリースノートで発表されました。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Spanner Change Streams to BigQuery: Spannerトランザクション処理はどう連携されるか？</title>
+      <link>http://localhost:1313/posts/2023/spanner-transaction-in-change-streams-to-bq/</link>
+      <pubDate>Thu, 02 Mar 2023 00:00:00 -0900</pubDate>
+      
+      <guid>http://localhost:1313/posts/2023/spanner-transaction-in-change-streams-to-bq/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;2022年5月28日にCloud Spanner Change Streamsが&lt;a href=&#34;https://cloud.google.com/blog/products/spanner/change-streams-for-cloud-spanner-now-generally-available?hl=en&#34;&gt;GA&lt;/a&gt;化してから、ヘビーなSpannerユーザーの私たちにとしては、とてもとても黙っているわけにはいきません。が、時の流れが早い&amp;hellip;世の中には、サービスイメージをつかむための&lt;a href=&#34;https://medium.com/google-cloud/change-streams-in-cloud-spanner-replication-to-bigquery-61b20b78118a&#34;&gt;記事&lt;/a&gt;とCloud Skills Boostの&lt;a href=&#34;https://www.cloudskillsboost.google/catalog_lab/5725&#34;&gt;ラボ&lt;/a&gt;がすでに存在しております。そのため、この記事は少し深いところ（Spannerトランザクション処理）を探ってみたいと思います。これからChange Streamsを検証してみたい方に少しでも役立てばいいなと思います。&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた</title>
-      <link>http://example.org/posts/2022/run-dbscan-in-dataflow-custom-container/</link>
+      <link>http://localhost:1313/posts/2022/run-dbscan-in-dataflow-custom-container/</link>
       <pubDate>Mon, 24 Jan 2022 00:00:00 -0900</pubDate>
       
-      <guid>http://example.org/posts/2022/run-dbscan-in-dataflow-custom-container/</guid>
-      <description>背景 Dataflow now supports custom containers in GA. ※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。 になってから、</description>
+      <guid>http://localhost:1313/posts/2022/run-dbscan-in-dataflow-custom-container/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dataflow now supports &lt;a href=&#34;https://cloud.google.com/dataflow/docs/guides/using-custom-containers&#34;&gt;custom containers&lt;/a&gt; in GA.
+※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;になってから、もうすぐ半年が経ちます。一方、初心者にやさしいBigQuery MLのクラスタリングはK平均法（k-means）のみサポートしています。DBSCANはk-meansより優れるように&lt;a href=&#34;https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py&#34;&gt;見え&lt;/a&gt;ますので、Dataflowカスタムコンテナで回してみることにしました。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限</title>
-      <link>http://example.org/posts/2021/device-restriction-by-beyondcorp/</link>
+      <link>http://localhost:1313/posts/2021/device-restriction-by-beyondcorp/</link>
       <pubDate>Fri, 19 Nov 2021 00:00:00 -0900</pubDate>
       
-      <guid>http://example.org/posts/2021/device-restriction-by-beyondcorp/</guid>
-      <description>BeyondCorp Enterprise とは Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterpris</description>
+      <guid>http://localhost:1313/posts/2021/device-restriction-by-beyondcorp/</guid>
+      <description>&lt;h2 id=&#34;beyondcorp-enterprise-とは&#34;&gt;BeyondCorp Enterprise とは&lt;/h2&gt;
+&lt;p&gt;Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterprise」のサービスを一般提供しました。 BeyondCorp Enterpriseは、以下４つのGoogle Cloudサービスの組み合わせて、セキュリティの向上につながるソリューションです。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>BigQueryロードする前の文字コード変換</title>
-      <link>http://example.org/posts/2021/convert-encoding-before-bq-load/</link>
+      <link>http://localhost:1313/posts/2021/convert-encoding-before-bq-load/</link>
       <pubDate>Mon, 15 Nov 2021 00:00:00 -0900</pubDate>
       
-      <guid>http://example.org/posts/2021/convert-encoding-before-bq-load/</guid>
-      <description>背景 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ド</description>
+      <guid>http://localhost:1313/posts/2021/convert-encoding-before-bq-load/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ドキュメントには、下記の文言が含まれています。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>オンプレミス環境からGCSバケットにファイルのアップロード、最小権限の設定について</title>
-      <link>http://example.org/posts/2020/upload-to-gcs-from-on-premise-with-polp/</link>
+      <link>http://localhost:1313/posts/2020/upload-to-gcs-from-on-premise-with-polp/</link>
       <pubDate>Sat, 26 Dec 2020 00:00:00 -0900</pubDate>
       
-      <guid>http://example.org/posts/2020/upload-to-gcs-from-on-premise-with-polp/</guid>
-      <description>背景 エンドユーザーはオンプレミス環境から GCS バケットへファイルアップロードしたいという要望がありますが、情報はこれだけで、直接に聞くのも難しか</description>
+      <guid>http://localhost:1313/posts/2020/upload-to-gcs-from-on-premise-with-polp/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;エンドユーザーはオンプレミス環境から GCS バケットへファイルアップロードしたいという要望がありますが、情報はこれだけで、直接に聞くのも難しかったです。
+GCP プロジェクトは組織なしで作られていますが、Google Workspace を利用しているかどうか、Google アカウントを持っているかどうか、オンプレミス環境はどんな状況かなどなど、そういう要素に左右されないように、考えてみました。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>「Terraform」作成した GCE インスタンス中で、GitHub プライベートリポジトリからソースを落とす</title>
-      <link>http://example.org/posts/2020/github-clone-private-repo-to-gce-instance/</link>
+      <link>http://localhost:1313/posts/2020/github-clone-private-repo-to-gce-instance/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 -0900</pubDate>
       
-      <guid>http://example.org/posts/2020/github-clone-private-repo-to-gce-instance/</guid>
-      <description>背景 Terraform を利用して GCP などのリソースを簡単に apply・destroy できるから、必要となる時に、GCE インスタンスを作って、GitHub 上のプ</description>
+      <guid>http://localhost:1313/posts/2020/github-clone-private-repo-to-gce-instance/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;Terraform を利用して GCP などのリソースを簡単に apply・destroy できるから、必要となる時に、GCE インスタンスを作って、GitHub 上のプライベートリポジトリのソースをインスタンスで動かすという要望はありました。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>家に帰ったら、玄関のライトを自動に付けたい</title>
-      <link>http://example.org/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/</link>
+      <link>http://localhost:1313/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 -0900</pubDate>
       
-      <guid>http://example.org/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/</guid>
-      <description>背景 東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。 前に住んだマンションは、玄関に人感知ライトがついていました。 ほ、ほしい</description>
+      <guid>http://localhost:1313/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。&lt;/p&gt;
+&lt;p&gt;前に住んだマンションは、玄関に人感知ライトがついていました。&lt;/p&gt;
+&lt;p&gt;ほ、ほしい&lt;/p&gt;
+&lt;h2 id=&#34;揃ったもの&#34;&gt;揃ったもの&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;SwitchBot: Amazon Link&lt;/li&gt;
+&lt;li&gt;RaspberryPi 3&lt;/li&gt;
+&lt;li&gt;Nature Remo&lt;/li&gt;
+&lt;li&gt;Google Cloud Platform Account&lt;/li&gt;
+&lt;li&gt;LINE Developer Account&lt;/li&gt;
+&lt;li&gt;IFTTT Account&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;---&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Google Cloud Composer で Bigquery にロード時 「Error: Bad character (ASCII 0) encountered.」の回避策</title>
-      <link>http://example.org/posts/2020/avoid-ascii-0-error-cloud-composer/</link>
+      <link>http://localhost:1313/posts/2020/avoid-ascii-0-error-cloud-composer/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 -0900</pubDate>
       
-      <guid>http://example.org/posts/2020/avoid-ascii-0-error-cloud-composer/</guid>
-      <description>背景 GoogleCloudStorageToBigQueryOperator を使った csv ファイルを Bigquery にロードする処理で、下記のエラーが発生しました。 「Error while reading data, error message: Error detected while parsing row starting at position: XXX. Error: Bad character (ASCII 0) encount</description>
+      <guid>http://localhost:1313/posts/2020/avoid-ascii-0-error-cloud-composer/</guid>
+      <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
+&lt;p&gt;GoogleCloudStorageToBigQueryOperator を使った csv ファイルを Bigquery にロードする処理で、下記のエラーが発生しました。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;「Error while reading data, error message: Error detected while parsing row starting at position: XXX. Error: Bad character (ASCII 0) encountered.」&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;回避策&#34;&gt;回避策&lt;/h2&gt;
+&lt;p&gt;調べたところ、取込 csv ファイルに「&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%83%8C%E3%83%AB%E6%96%87%E5%AD%97&#34;&gt;ヌル文字 - Wikipedia&lt;/a&gt;」が混入しました。&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>My credentials</title>
-      <link>http://example.org/pages/my-credentials/</link>
+      <link>http://localhost:1313/pages/my-credentials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/pages/my-credentials/</guid>
-      <description> Professional Data Engineer Professional Cloud Architect Associate Cloud Engineer </description>
+      <guid>http://localhost:1313/pages/my-credentials/</guid>
+      <description>&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credential.net/f811917b-a60e-4a65-8c11-f3c800881e9f&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;./images/data_engineer.png&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
+            Professional Data Engineer
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credential.net/0efdf7d9-8903-4cce-96a5-cc9c3ec5f365&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;./images/cloud_architect.png&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
+            Professional Cloud Architect
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credential.net/fe1304e4-64ac-4550-9391-1bc2e9e5a01e&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;./images/cloud_engineer.png&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
+            Associate Cloud Engineer
+        &lt;/figcaption&gt;
+&lt;/figure&gt;</description>
     </item>
     
   </channel>

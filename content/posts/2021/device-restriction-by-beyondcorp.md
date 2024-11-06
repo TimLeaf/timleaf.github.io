@@ -11,7 +11,7 @@ tag:
   - VPC Service Controls
 ---
 
-# BeyondCorp Enterprise とは
+## BeyondCorp Enterprise とは
 
 Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterprise」のサービスを一般提供しました。 BeyondCorp Enterpriseは、以下４つのGoogle Cloudサービスの組み合わせて、セキュリティの向上につながるソリューションです。
 

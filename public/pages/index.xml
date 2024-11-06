@@ -2,17 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Pages on TimLeaf</title>
-    <link>http://example.org/pages/</link>
+    <link>http://localhost:1313/pages/</link>
     <description>Recent content in Pages on TimLeaf</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language><atom:link href="http://example.org/pages/index.xml" rel="self" type="application/rss+xml" />
+    <language>ja</language><atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My credentials</title>
-      <link>http://example.org/pages/my-credentials/</link>
+      <link>http://localhost:1313/pages/my-credentials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/pages/my-credentials/</guid>
-      <description> Professional Data Engineer Professional Cloud Architect Associate Cloud Engineer </description>
+      <guid>http://localhost:1313/pages/my-credentials/</guid>
+      <description>&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credential.net/f811917b-a60e-4a65-8c11-f3c800881e9f&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;./images/data_engineer.png&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
+            Professional Data Engineer
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credential.net/0efdf7d9-8903-4cce-96a5-cc9c3ec5f365&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;./images/cloud_architect.png&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
+            Professional Cloud Architect
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credential.net/fe1304e4-64ac-4550-9391-1bc2e9e5a01e&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;./images/cloud_engineer.png&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
+            Associate Cloud Engineer
+        &lt;/figcaption&gt;
+&lt;/figure&gt;</description>
     </item>
     
   </channel>

@@ -5,12 +5,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="noindex, nofollow">
-<title>BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限 | TimLeaf</title>
+<title>BigQuery 連携クエリ・外部データセットが使う Spanner トランザクションについて | TimLeaf</title>
 <meta name="keywords" content="">
-<meta name="description" content="BeyondCorp Enterprise とは
-Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterprise」のサービスを一般提供しました。 BeyondCorp Enterpriseは、以下４つのGoogle Cloudサービスの組み合わせて、セキュリティの向上につながるソリューションです。">
+<meta name="description" content="背景
+2024年4月のGoogle Cloud Next &lsquo;24 Las Vegas Recapで言及されて以来、10月3日に、BigQuery external dataset を使って Spanner のデータセットをリンクする機能が Public Preview になったとリリースノートで発表されました。">
 <meta name="author" content="">
-<link rel="canonical" href="http://localhost:1313/posts/2021/device-restriction-by-beyondcorp/">
+<link rel="canonical" href="http://localhost:1313/posts/2024/bigquery-federated-queries-external-dataset-with-spanner-transaction/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b4022fd15822e5266604dee8edcac37b861d7460498995f217070f0a57e92ddf.css" integrity="sha256-tAIv0Vgi5SZmBN7o7crDe4YddGBJiZXyFwcPClfpLd8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
@@ -21,7 +21,7 @@ Googleはゼロトラストを社内で長年に取り込んで、2021年初に�
 <link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="ja" href="http://localhost:1313/posts/2021/device-restriction-by-beyondcorp/">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/posts/2024/bigquery-federated-queries-external-dataset-with-spanner-transaction/">
 <noscript>
     <style>
         #theme-toggle,
@@ -124,31 +124,18 @@ Googleはゼロトラストを社内で長年に取り込んで、2021年初に�
   <header class="post-header">
     
     <h1 class="post-title">
-      BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限
+      BigQuery 連携クエリ・外部データセットが使う Spanner トランザクションについて
     </h1>
-    <div class="post-meta">&lt;span title=&#39;2021-11-19 00:00:00 -0900 -0900&#39;&gt;2021年11月19日&lt;/span&gt;
+    <div class="post-meta">&lt;span title=&#39;2024-11-06 00:00:00 -0900 -0900&#39;&gt;2024年11月6日&lt;/span&gt;
 
 </div>
   </header> 
-  <div class="post-content"><h2 id="beyondcorp-enterprise-とは">BeyondCorp Enterprise とは<a hidden class="anchor" aria-hidden="true" href="#beyondcorp-enterprise-とは">#</a></h2>
-<p>Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterprise」のサービスを一般提供しました。 BeyondCorp Enterpriseは、以下４つのGoogle Cloudサービスの組み合わせて、セキュリティの向上につながるソリューションです。</p>
-<ul>
-<li>Identity-Aware Proxy（IAP）によるGCPリソースの保護
-<ul>
-<li>App Engine、Compute Engine、Kubernetes Engine、オンプレミス環境で動くアプリケーションの保護</li>
-<li>VMインスタンスへのSSH、RDP接続の保護</li>
-</ul>
-</li>
-<li>アクセスルールを定義するため、Access Context Manager（ACM）でアクセスレベルの作成</li>
-<li>Identity and Access Management（IAM）条件の適用
-<ul>
-<li>ACMで作成したアクセスレベルをIAM条件に適用</li>
-</ul>
-</li>
-<li>Google Chrome拡張機能のEndpoint Verificationによるデバイス情報の収集</li>
-</ul>
+  <div class="post-content"><h2 id="背景">背景<a hidden class="anchor" aria-hidden="true" href="#背景">#</a></h2>
+<p>2024年4月の<a href="https://cloudonair.withgoogle.com/events/gc-updates?talk=optional1-2024">Google Cloud Next &lsquo;24 Las Vegas Recap</a>で言及されて以来、10月3日に、BigQuery external dataset を使って Spanner のデータセットをリンクする機能が Public Preview になったとリリースノートで発表されました。</p>
+<p>生成AIほどの注目を集めていないかもしれませんが、みんなの銀行のデータ基盤にとっては、嬉しいリリースになりそうです。</p>
+<p>みんなの銀行開業に伴い、データ基盤システムが稼働開始しました。多様なデータソースから、リアルタイム、毎時、毎日といった頻度でデータ連携処理を行っています。その中で、やむを得ず、一部データについては、Spanner から BigQuery への日次連携に以下の方法を採用しました。</p>
 <p>---</p>
-    <a class="readmore" href="https://dryaki.gicloud.co.jp/articles/device-restriction-by-beyondcorp"><i class="fa-solid fa-up-right-from-square"></i> 投稿先で全ての内容を読む...</a>
+    <a class="readmore" href="https://qiita.com/l-jiang-zdf/items/3bbb3902c96c26d73d15"><i class="fa-solid fa-up-right-from-square"></i> 投稿先で全ての内容を読む...</a>
 
 
   </div>

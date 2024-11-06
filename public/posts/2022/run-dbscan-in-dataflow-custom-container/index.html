@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="ja" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた | TimLeaf</title>
 <meta name="keywords" content="">
-<meta name="description" content="背景 Dataflow now supports custom containers in GA. ※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。 になってから、">
+<meta name="description" content="背景
+
+Dataflow now supports custom containers in GA.
+※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。
+
+になってから、もうすぐ半年が経ちます。一方、初心者にやさしいBigQuery MLのクラスタリングはK平均法（k-means）のみサポートしています。DBSCANはk-meansより優れるように見えますので、Dataflowカスタムコンテナで回してみることにしました。">
 <meta name="author" content="">
-<link rel="canonical" href="http://example.org/posts/2022/run-dbscan-in-dataflow-custom-container/">
+<link rel="canonical" href="http://localhost:1313/posts/2022/run-dbscan-in-dataflow-custom-container/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b4022fd15822e5266604dee8edcac37b861d7460498995f217070f0a57e92ddf.css" integrity="sha256-tAIv0Vgi5SZmBN7o7crDe4YddGBJiZXyFwcPClfpLd8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://example.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
-<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/posts/2022/run-dbscan-in-dataflow-custom-container/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,67 +62,9 @@
         }
 
     </style>
-</noscript><script src="https://kit.fontawesome.com/5fac740f53.js" crossorigin="anonymous"></script><meta property="og:title" content="DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた" />
-<meta property="og:description" content="背景 Dataflow now supports custom containers in GA. ※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。 になってから、" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/posts/2022/run-dbscan-in-dataflow-custom-container/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2022-01-24T00:00:00-09:00" />
-<meta property="article:modified_time" content="2022-01-24T00:00:00-09:00" />
+</noscript><script src="https://kit.fontawesome.com/5fac740f53.js" crossorigin="anonymous"></script>
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた"/>
-<meta name="twitter:description" content="背景 Dataflow now supports custom containers in GA. ※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。 になってから、"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "List",
-      "item": "http://example.org/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた",
-      "item": "http://example.org/posts/2022/run-dbscan-in-dataflow-custom-container/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた",
-  "name": "DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた",
-  "description": "背景 Dataflow now supports custom containers in GA. ※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。 になってから、",
-  "keywords": [
-    
-  ],
-  "articleBody": "背景 Dataflow now supports custom containers in GA. ※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。\nになってから、もうすぐ半年が経ちます。一方、初心者にやさしいBigQuery MLのクラスタリングはK平均法（k-means）のみサポートしています。DBSCANはk-meansより優れるように見えますので、Dataflowカスタムコンテナで回してみることにしました。\n準備 Dataflow でのカスタム コンテナの使用には詳しい内容がありますから、Apache Beam SDK (\u003e2.30.0)とDockerインストールの説明は割愛させていただきます。\n---\n投稿先で全ての内容を読む... ",
-  "wordCount" : "292",
-  "inLanguage": "ja",
-  "datePublished": "2022-01-24T00:00:00-09:00",
-  "dateModified": "2022-01-24T00:00:00-09:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "http://example.org/posts/2022/run-dbscan-in-dataflow-custom-container/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "TimLeaf",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "http://example.org/favicon.ico"
-    }
-  }
-}
-</script>
+<meta name="robots" content="noindex, nofollow">
 </head>
 
 <body class="" id="top">
@@ -134,7 +82,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://example.org/" accesskey="h" title="TimLeaf (Alt + H)">TimLeaf</a>
+            <a href="http://localhost:1313/" accesskey="h" title="TimLeaf (Alt + H)">TimLeaf</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -156,16 +104,18 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="http://example.org/posts/" title="post">
+                <a href="http://localhost:1313/posts/" title="post">
                     <span>post</span>
                 </a>
             </li>
             <li>
-                <a href="http://example.org/pages/my-credentials/" title="my credential">
+                <a href="http://localhost:1313/pages/my-credentials/" title="my credential">
                     <span>my credential</span>
                 </a>
             </li>
@@ -180,17 +130,17 @@
     <h1 class="post-title">
       DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた
     </h1>
-    <div class="post-meta"><span title='2022-01-24 00:00:00 -0900 -0900'>1月 24, 2022</span>
+    <div class="post-meta">&lt;span title=&#39;2022-01-24 00:00:00 -0900 -0900&#39;&gt;2022年1月24日&lt;/span&gt;
 
 </div>
   </header> 
-  <div class="post-content"><h1 id="背景">背景<a hidden class="anchor" aria-hidden="true" href="#背景">#</a></h1>
+  <div class="post-content"><h2 id="背景">背景<a hidden class="anchor" aria-hidden="true" href="#背景">#</a></h2>
 <blockquote>
 <p>Dataflow now supports <a href="https://cloud.google.com/dataflow/docs/guides/using-custom-containers">custom containers</a> in GA.
 ※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。</p>
 </blockquote>
 <p>になってから、もうすぐ半年が経ちます。一方、初心者にやさしいBigQuery MLのクラスタリングはK平均法（k-means）のみサポートしています。DBSCANはk-meansより優れるように<a href="https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py">見え</a>ますので、Dataflowカスタムコンテナで回してみることにしました。</p>
-<h1 id="準備">準備<a hidden class="anchor" aria-hidden="true" href="#準備">#</a></h1>
+<h2 id="準備">準備<a hidden class="anchor" aria-hidden="true" href="#準備">#</a></h2>
 <p><a href="https://cloud.google.com/dataflow/docs/guides/using-custom-containers#python">Dataflow でのカスタム コンテナの使用</a>には詳しい内容がありますから、Apache Beam SDK (&gt;2.30.0)とDockerインストールの説明は割愛させていただきます。</p>
 <p>---</p>
     <a class="readmore" href="https://dryaki.gicloud.co.jp/articles/run-dbscan-in-dataflow-custom-container"><i class="fa-solid fa-up-right-from-square"></i> 投稿先で全ての内容を読む...</a>
@@ -206,7 +156,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="http://example.org/">TimLeaf</a></span>
+    <span>&copy; 2024 <a href="http://localhost:1313/">TimLeaf</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

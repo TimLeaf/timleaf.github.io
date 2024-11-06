@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>家に帰ったら、玄関のライトを自動に付けたい | TimLeaf</title>
 <meta name="keywords" content="">
-<meta name="description" content="背景 東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。 前に住んだマンションは、玄関に人感知ライトがついていました。 ほ、ほしい">
+<meta name="description" content="背景
+東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。
+前に住んだマンションは、玄関に人感知ライトがついていました。
+ほ、ほしい
+揃ったもの
+
+SwitchBot: Amazon Link
+RaspberryPi 3
+Nature Remo
+Google Cloud Platform Account
+LINE Developer Account
+IFTTT Account
+
+---">
 <meta name="author" content="">
-<link rel="canonical" href="http://example.org/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/">
+<link rel="canonical" href="http://localhost:1313/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b4022fd15822e5266604dee8edcac37b861d7460498995f217070f0a57e92ddf.css" integrity="sha256-tAIv0Vgi5SZmBN7o7crDe4YddGBJiZXyFwcPClfpLd8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://example.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
-<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,67 +70,9 @@
         }
 
     </style>
-</noscript><script src="https://kit.fontawesome.com/5fac740f53.js" crossorigin="anonymous"></script><meta property="og:title" content="家に帰ったら、玄関のライトを自動に付けたい" />
-<meta property="og:description" content="背景 東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。 前に住んだマンションは、玄関に人感知ライトがついていました。 ほ、ほしい" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-04-19T00:00:00-09:00" />
-<meta property="article:modified_time" content="2020-04-19T00:00:00-09:00" />
+</noscript><script src="https://kit.fontawesome.com/5fac740f53.js" crossorigin="anonymous"></script>
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="家に帰ったら、玄関のライトを自動に付けたい"/>
-<meta name="twitter:description" content="背景 東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。 前に住んだマンションは、玄関に人感知ライトがついていました。 ほ、ほしい"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "List",
-      "item": "http://example.org/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "家に帰ったら、玄関のライトを自動に付けたい",
-      "item": "http://example.org/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "家に帰ったら、玄関のライトを自動に付けたい",
-  "name": "家に帰ったら、玄関のライトを自動に付けたい",
-  "description": "背景 東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。 前に住んだマンションは、玄関に人感知ライトがついていました。 ほ、ほしい",
-  "keywords": [
-    
-  ],
-  "articleBody": "背景 東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。\n前に住んだマンションは、玄関に人感知ライトがついていました。\nほ、ほしい\n揃ったもの SwitchBot: Amazon Link RaspberryPi 3 Nature Remo Google Cloud Platform Account LINE Developer Account IFTTT Account ---\n投稿先で全ての内容を読む... ",
-  "wordCount" : "107",
-  "inLanguage": "ja",
-  "datePublished": "2020-04-19T00:00:00-09:00",
-  "dateModified": "2020-04-19T00:00:00-09:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "http://example.org/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "TimLeaf",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "http://example.org/favicon.ico"
-    }
-  }
-}
-</script>
+<meta name="robots" content="noindex, nofollow">
 </head>
 
 <body class="" id="top">
@@ -134,7 +90,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://example.org/" accesskey="h" title="TimLeaf (Alt + H)">TimLeaf</a>
+            <a href="http://localhost:1313/" accesskey="h" title="TimLeaf (Alt + H)">TimLeaf</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -156,16 +112,18 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="http://example.org/posts/" title="post">
+                <a href="http://localhost:1313/posts/" title="post">
                     <span>post</span>
                 </a>
             </li>
             <li>
-                <a href="http://example.org/pages/my-credentials/" title="my credential">
+                <a href="http://localhost:1313/pages/my-credentials/" title="my credential">
                     <span>my credential</span>
                 </a>
             </li>
@@ -180,15 +138,15 @@
     <h1 class="post-title">
       家に帰ったら、玄関のライトを自動に付けたい
     </h1>
-    <div class="post-meta"><span title='2020-04-19 00:00:00 -0900 -0900'>4月 19, 2020</span>
+    <div class="post-meta">&lt;span title=&#39;2020-04-19 00:00:00 -0900 -0900&#39;&gt;2020年4月19日&lt;/span&gt;
 
 </div>
   </header> 
-  <div class="post-content"><h1 id="背景">背景<a hidden class="anchor" aria-hidden="true" href="#背景">#</a></h1>
+  <div class="post-content"><h2 id="背景">背景<a hidden class="anchor" aria-hidden="true" href="#背景">#</a></h2>
 <p>東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。</p>
 <p>前に住んだマンションは、玄関に人感知ライトがついていました。</p>
 <p>ほ、ほしい</p>
-<h1 id="揃ったもの">揃ったもの<a hidden class="anchor" aria-hidden="true" href="#揃ったもの">#</a></h1>
+<h2 id="揃ったもの">揃ったもの<a hidden class="anchor" aria-hidden="true" href="#揃ったもの">#</a></h2>
 <ul>
 <li>SwitchBot: Amazon Link</li>
 <li>RaspberryPi 3</li>
@@ -211,7 +169,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="http://example.org/">TimLeaf</a></span>
+    <span>&copy; 2024 <a href="http://localhost:1313/">TimLeaf</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

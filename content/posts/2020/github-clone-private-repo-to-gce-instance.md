@@ -12,7 +12,7 @@ tag:
   - Cloud Storage
 ---
 
-# 背景
+## 背景
 
 Terraform を利用して GCP などのリソースを簡単に apply・destroy できるから、必要となる時に、GCE インスタンスを作って、GitHub 上のプライベートリポジトリのソースをインスタンスで動かすという要望はありました。
 
@@ -21,7 +21,7 @@ Terraform バージョン:
 - Terraform v0.12.28
 - provider.google v3.5.0
 
-# GitHub アカウントの SSH 秘密鍵
+## GitHub アカウントの SSH 秘密鍵
 
 GitHub Docsを参照して、パスフレーズなしの SSH 秘密鍵を作ります。そして、作成した公開鍵（id_rsa.pub）は GitHub アカウントへ追加します。
 

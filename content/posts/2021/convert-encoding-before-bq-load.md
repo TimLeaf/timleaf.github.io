@@ -12,7 +12,8 @@ tag:
   - Character code
 ---
 
-# 背景
+## 背景
+
 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ドキュメントには、下記の文言が含まれています。
 
 > BigQuery に読み込む CSV データは UTF-8 でエンコードされている必要があります。 ISO-8859-1(Latin-1)の場合は--encodingで明記する必要はあります。 [Cloud Storage からの CSV データの読み込み](https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-csv#encoding)

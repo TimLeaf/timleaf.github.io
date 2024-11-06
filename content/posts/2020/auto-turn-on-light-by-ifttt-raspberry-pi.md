@@ -10,7 +10,7 @@ tag:
   - Cloud PubSub
 ---
 
-# 背景
+## 背景
 
 東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。
 
@@ -18,7 +18,7 @@ tag:
 
 ほ、ほしい
 
-# 揃ったもの
+## 揃ったもの
 
 - SwitchBot: Amazon Link
 - RaspberryPi 3

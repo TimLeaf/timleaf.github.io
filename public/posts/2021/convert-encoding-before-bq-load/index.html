@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja" dir="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 <title>BigQueryロードする前の文字コード変換 | TimLeaf</title>
 <meta name="keywords" content="">
-<meta name="description" content="背景 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ド">
+<meta name="description" content="背景
+Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ドキュメントには、下記の文言が含まれています。">
 <meta name="author" content="">
-<link rel="canonical" href="http://example.org/posts/2021/convert-encoding-before-bq-load/">
+<link rel="canonical" href="http://localhost:1313/posts/2021/convert-encoding-before-bq-load/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.b4022fd15822e5266604dee8edcac37b861d7460498995f217070f0a57e92ddf.css" integrity="sha256-tAIv0Vgi5SZmBN7o7crDe4YddGBJiZXyFwcPClfpLd8=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
     onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="http://example.org/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://example.org/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://example.org/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://example.org/apple-touch-icon.png">
-<link rel="mask-icon" href="http://example.org/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="ja" href="http://localhost:1313/posts/2021/convert-encoding-before-bq-load/">
 <noscript>
     <style>
         #theme-toggle,
@@ -56,67 +58,9 @@
         }
 
     </style>
-</noscript><script src="https://kit.fontawesome.com/5fac740f53.js" crossorigin="anonymous"></script><meta property="og:title" content="BigQueryロードする前の文字コード変換" />
-<meta property="og:description" content="背景 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ド" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://example.org/posts/2021/convert-encoding-before-bq-load/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-11-15T00:00:00-09:00" />
-<meta property="article:modified_time" content="2021-11-15T00:00:00-09:00" />
+</noscript><script src="https://kit.fontawesome.com/5fac740f53.js" crossorigin="anonymous"></script>
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="BigQueryロードする前の文字コード変換"/>
-<meta name="twitter:description" content="背景 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ド"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "List",
-      "item": "http://example.org/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "BigQueryロードする前の文字コード変換",
-      "item": "http://example.org/posts/2021/convert-encoding-before-bq-load/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "BigQueryロードする前の文字コード変換",
-  "name": "BigQueryロードする前の文字コード変換",
-  "description": "背景 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ド",
-  "keywords": [
-    
-  ],
-  "articleBody": "背景 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ドキュメントには、下記の文言が含まれています。\nBigQuery に読み込む CSV データは UTF-8 でエンコードされている必要があります。 ISO-8859-1(Latin-1)の場合は–encodingで明記する必要はあります。 Cloud Storage からの CSV データの読み込み\nということで、Shift_JISやEUC-JPなどが多用されているため、BigQueryにロードする前に、UTF-8へ変換しなければなりません。\nここではiconvコマンドを用いて、Shift_JIS(CP932)をUTF-8へ変換をCloud Functions、Cloud Runで試みます。\nShift_JIS のバリエーションについて、Shift_JIS 系文字一覧イメージと SJIS・MS932・CP943・SJIS2004 の違いを参照してください。\n---\n投稿先で全ての内容を読む... ",
-  "wordCount" : "420",
-  "inLanguage": "ja",
-  "datePublished": "2021-11-15T00:00:00-09:00",
-  "dateModified": "2021-11-15T00:00:00-09:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "http://example.org/posts/2021/convert-encoding-before-bq-load/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "TimLeaf",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "http://example.org/favicon.ico"
-    }
-  }
-}
-</script>
+<meta name="robots" content="noindex, nofollow">
 </head>
 
 <body class="" id="top">
@@ -134,7 +78,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://example.org/" accesskey="h" title="TimLeaf (Alt + H)">TimLeaf</a>
+            <a href="http://localhost:1313/" accesskey="h" title="TimLeaf (Alt + H)">TimLeaf</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -156,16 +100,18 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
+                <ul class="lang-switch"><li>|</li>
+                </ul>
             </div>
         </div>
         <ul id="menu">
             <li>
-                <a href="http://example.org/posts/" title="post">
+                <a href="http://localhost:1313/posts/" title="post">
                     <span>post</span>
                 </a>
             </li>
             <li>
-                <a href="http://example.org/pages/my-credentials/" title="my credential">
+                <a href="http://localhost:1313/pages/my-credentials/" title="my credential">
                     <span>my credential</span>
                 </a>
             </li>
@@ -180,11 +126,11 @@
     <h1 class="post-title">
       BigQueryロードする前の文字コード変換
     </h1>
-    <div class="post-meta"><span title='2021-11-15 00:00:00 -0900 -0900'>11月 15, 2021</span>
+    <div class="post-meta">&lt;span title=&#39;2021-11-15 00:00:00 -0900 -0900&#39;&gt;2021年11月15日&lt;/span&gt;
 
 </div>
   </header> 
-  <div class="post-content"><h1 id="背景">背景<a hidden class="anchor" aria-hidden="true" href="#背景">#</a></h1>
+  <div class="post-content"><h2 id="背景">背景<a hidden class="anchor" aria-hidden="true" href="#背景">#</a></h2>
 <p>Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ドキュメントには、下記の文言が含まれています。</p>
 <blockquote>
 <p>BigQuery に読み込む CSV データは UTF-8 でエンコードされている必要があります。 ISO-8859-1(Latin-1)の場合は&ndash;encodingで明記する必要はあります。 <a href="https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-csv#encoding">Cloud Storage からの CSV データの読み込み</a></p>
@@ -208,7 +154,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="http://example.org/">TimLeaf</a></span>
+    <span>&copy; 2024 <a href="http://localhost:1313/">TimLeaf</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
