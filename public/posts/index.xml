@@ -4,34 +4,30 @@
     <title>List on TimLeaf</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in List on TimLeaf</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.137.1</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 06 Nov 2024 00:00:00 -0900</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 06 Nov 2024 00:00:00 -0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>BigQuery 連携クエリ・外部データセットが使う Spanner トランザクションについて</title>
       <link>http://localhost:1313/posts/2024/bigquery-federated-queries-external-dataset-with-spanner-transaction/</link>
       <pubDate>Wed, 06 Nov 2024 00:00:00 -0900</pubDate>
-      
       <guid>http://localhost:1313/posts/2024/bigquery-federated-queries-external-dataset-with-spanner-transaction/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;2024年4月の&lt;a href=&#34;https://cloudonair.withgoogle.com/events/gc-updates?talk=optional1-2024&#34;&gt;Google Cloud Next &amp;lsquo;24 Las Vegas Recap&lt;/a&gt;で言及されて以来、10月3日に、BigQuery external dataset を使って Spanner のデータセットをリンクする機能が Public Preview になったとリリースノートで発表されました。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Spanner Change Streams to BigQuery: Spannerトランザクション処理はどう連携されるか？</title>
       <link>http://localhost:1313/posts/2023/spanner-transaction-in-change-streams-to-bq/</link>
       <pubDate>Thu, 02 Mar 2023 00:00:00 -0900</pubDate>
-      
       <guid>http://localhost:1313/posts/2023/spanner-transaction-in-change-streams-to-bq/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;2022年5月28日にCloud Spanner Change Streamsが&lt;a href=&#34;https://cloud.google.com/blog/products/spanner/change-streams-for-cloud-spanner-now-generally-available?hl=en&#34;&gt;GA&lt;/a&gt;化してから、ヘビーなSpannerユーザーの私たちにとしては、とてもとても黙っているわけにはいきません。が、時の流れが早い&amp;hellip;世の中には、サービスイメージをつかむための&lt;a href=&#34;https://medium.com/google-cloud/change-streams-in-cloud-spanner-replication-to-bigquery-61b20b78118a&#34;&gt;記事&lt;/a&gt;とCloud Skills Boostの&lt;a href=&#34;https://www.cloudskillsboost.google/catalog_lab/5725&#34;&gt;ラボ&lt;/a&gt;がすでに存在しております。そのため、この記事は少し深いところ（Spannerトランザクション処理）を探ってみたいと思います。これからChange Streamsを検証してみたい方に少しでも役立てばいいなと思います。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた</title>
       <link>http://localhost:1313/posts/2022/run-dbscan-in-dataflow-custom-container/</link>
       <pubDate>Mon, 24 Jan 2022 00:00:00 -0900</pubDate>
-      
       <guid>http://localhost:1313/posts/2022/run-dbscan-in-dataflow-custom-container/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -40,53 +36,43 @@
 &lt;/blockquote&gt;
 &lt;p&gt;になってから、もうすぐ半年が経ちます。一方、初心者にやさしいBigQuery MLのクラスタリングはK平均法（k-means）のみサポートしています。DBSCANはk-meansより優れるように&lt;a href=&#34;https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py&#34;&gt;見え&lt;/a&gt;ますので、Dataflowカスタムコンテナで回してみることにしました。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限</title>
       <link>http://localhost:1313/posts/2021/device-restriction-by-beyondcorp/</link>
       <pubDate>Fri, 19 Nov 2021 00:00:00 -0900</pubDate>
-      
       <guid>http://localhost:1313/posts/2021/device-restriction-by-beyondcorp/</guid>
       <description>&lt;h2 id=&#34;beyondcorp-enterprise-とは&#34;&gt;BeyondCorp Enterprise とは&lt;/h2&gt;
 &lt;p&gt;Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterprise」のサービスを一般提供しました。 BeyondCorp Enterpriseは、以下４つのGoogle Cloudサービスの組み合わせて、セキュリティの向上につながるソリューションです。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>BigQueryロードする前の文字コード変換</title>
       <link>http://localhost:1313/posts/2021/convert-encoding-before-bq-load/</link>
       <pubDate>Mon, 15 Nov 2021 00:00:00 -0900</pubDate>
-      
       <guid>http://localhost:1313/posts/2021/convert-encoding-before-bq-load/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ドキュメントには、下記の文言が含まれています。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>オンプレミス環境からGCSバケットにファイルのアップロード、最小権限の設定について</title>
       <link>http://localhost:1313/posts/2020/upload-to-gcs-from-on-premise-with-polp/</link>
       <pubDate>Sat, 26 Dec 2020 00:00:00 -0900</pubDate>
-      
       <guid>http://localhost:1313/posts/2020/upload-to-gcs-from-on-premise-with-polp/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;エンドユーザーはオンプレミス環境から GCS バケットへファイルアップロードしたいという要望がありますが、情報はこれだけで、直接に聞くのも難しかったです。
 GCP プロジェクトは組織なしで作られていますが、Google Workspace を利用しているかどうか、Google アカウントを持っているかどうか、オンプレミス環境はどんな状況かなどなど、そういう要素に左右されないように、考えてみました。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>「Terraform」作成した GCE インスタンス中で、GitHub プライベートリポジトリからソースを落とす</title>
       <link>http://localhost:1313/posts/2020/github-clone-private-repo-to-gce-instance/</link>
       <pubDate>Sun, 05 Jul 2020 00:00:00 -0900</pubDate>
-      
       <guid>http://localhost:1313/posts/2020/github-clone-private-repo-to-gce-instance/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;Terraform を利用して GCP などのリソースを簡単に apply・destroy できるから、必要となる時に、GCE インスタンスを作って、GitHub 上のプライベートリポジトリのソースをインスタンスで動かすという要望はありました。&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>家に帰ったら、玄関のライトを自動に付けたい</title>
       <link>http://localhost:1313/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/</link>
       <pubDate>Sun, 19 Apr 2020 00:00:00 -0900</pubDate>
-      
       <guid>http://localhost:1313/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;東京のある団地に住んでいる私、通勤の日々中で、ふと思い出しました。&lt;/p&gt;
@@ -103,12 +89,10 @@ GCP プロジェクトは組織なしで作られていますが、Google Worksp
 &lt;/ul&gt;
 &lt;p&gt;---&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Google Cloud Composer で Bigquery にロード時 「Error: Bad character (ASCII 0) encountered.」の回避策</title>
       <link>http://localhost:1313/posts/2020/avoid-ascii-0-error-cloud-composer/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 -0900</pubDate>
-      
       <guid>http://localhost:1313/posts/2020/avoid-ascii-0-error-cloud-composer/</guid>
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;GoogleCloudStorageToBigQueryOperator を使った csv ファイルを Bigquery にロードする処理で、下記のエラーが発生しました。&lt;/p&gt;
@@ -118,6 +102,5 @@ GCP プロジェクトは組織なしで作られていますが、Google Worksp
 &lt;h2 id=&#34;回避策&#34;&gt;回避策&lt;/h2&gt;
 &lt;p&gt;調べたところ、取込 csv ファイルに「&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%83%8C%E3%83%AB%E6%96%87%E5%AD%97&#34;&gt;ヌル文字 - Wikipedia&lt;/a&gt;」が混入しました。&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

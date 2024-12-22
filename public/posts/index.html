@@ -10,7 +10,7 @@
 <meta name="description" content="List - TimLeaf">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.b4022fd15822e5266604dee8edcac37b861d7460498995f217070f0a57e92ddf.css" integrity="sha256-tAIv0Vgi5SZmBN7o7crDe4YddGBJiZXyFwcPClfpLd8=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f3eccfe2c704a8ff50cfae909bfaab4c4868f68bc35c273e5ee6505b0f459bfa.css" integrity="sha256-8&#43;zP4scEqP9Qz66Qm/qrTEho9ovDXCc&#43;XuZQWw9Fm/o=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -37,7 +37,7 @@
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -98,8 +98,6 @@
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <ul class="lang-switch"><li>|</li>
-                </ul>
             </div>
         </div>
         <ul id="menu">
@@ -125,33 +123,33 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>BigQuery 連携クエリ・外部データセットが使う Spanner トランザクションについて
+    <h2 class="entry-hint-parent">BigQuery 連携クエリ・外部データセットが使う Spanner トランザクションについて
     </h2>
   </header>
   <div class="entry-content">
     <p>背景 2024年4月のGoogle Cloud Next ‘24 Las Vegas Recapで言及されて以来、10月3日に、BigQuery external dataset を使って Spanner のデータセットをリンクする機能が Public Preview になったとリリースノートで発表されました。
 ...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2024-11-06 00:00:00 -0900 -0900&#39;&gt;2024年11月6日&lt;/span&gt;</footer>
+  <footer class="entry-footer"><span title='2024-11-06 00:00:00 -0900 -0900'>2024年11月6日</span></footer>
   <a class="entry-link" aria-label="post link to BigQuery 連携クエリ・外部データセットが使う Spanner トランザクションについて" href="http://localhost:1313/posts/2024/bigquery-federated-queries-external-dataset-with-spanner-transaction/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Spanner Change Streams to BigQuery: Spannerトランザクション処理はどう連携されるか？
+    <h2 class="entry-hint-parent">Spanner Change Streams to BigQuery: Spannerトランザクション処理はどう連携されるか？
     </h2>
   </header>
   <div class="entry-content">
     <p>背景 2022年5月28日にCloud Spanner Change StreamsがGA化してから、ヘビーなSpannerユーザーの私たちにとしては、とてもとても黙っているわけにはいきません。が、時の流れが早い…世の中には、サービスイメージをつかむための記事とCloud Skills Boostのラボがすでに存在しております。そのため、この記事は少し深いところ（Spannerトランザクション処理）を探ってみたいと思います。これからChange Streamsを検証してみたい方に少しでも役立てばいいなと思います。
 ...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2023-03-02 00:00:00 -0900 -0900&#39;&gt;2023年3月2日&lt;/span&gt;</footer>
+  <footer class="entry-footer"><span title='2023-03-02 00:00:00 -0900 -0900'>2023年3月2日</span></footer>
   <a class="entry-link" aria-label="post link to Spanner Change Streams to BigQuery: Spannerトランザクション処理はどう連携されるか？" href="http://localhost:1313/posts/2023/spanner-transaction-in-change-streams-to-bq/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた
+    <h2 class="entry-hint-parent">DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた
     </h2>
   </header>
   <div class="entry-content">
@@ -159,65 +157,65 @@
 になってから、もうすぐ半年が経ちます。一方、初心者にやさしいBigQuery MLのクラスタリングはK平均法（k-means）のみサポートしています。DBSCANはk-meansより優れるように見えますので、Dataflowカスタムコンテナで回してみることにしました。
 ...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2022-01-24 00:00:00 -0900 -0900&#39;&gt;2022年1月24日&lt;/span&gt;</footer>
+  <footer class="entry-footer"><span title='2022-01-24 00:00:00 -0900 -0900'>2022年1月24日</span></footer>
   <a class="entry-link" aria-label="post link to DataflowカスタムコンテナでDBSCANクラスタリングを実行してみた" href="http://localhost:1313/posts/2022/run-dbscan-in-dataflow-custom-container/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限
+    <h2 class="entry-hint-parent">BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限
     </h2>
   </header>
   <div class="entry-content">
     <p>BeyondCorp Enterprise とは Googleはゼロトラストを社内で長年に取り込んで、2021年初にそのソリューションとして、「BeyondCorp Enterprise」のサービスを一般提供しました。 BeyondCorp Enterpriseは、以下４つのGoogle Cloudサービスの組み合わせて、セキュリティの向上につながるソリューションです。
 ...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2021-11-19 00:00:00 -0900 -0900&#39;&gt;2021年11月19日&lt;/span&gt;</footer>
+  <footer class="entry-footer"><span title='2021-11-19 00:00:00 -0900 -0900'>2021年11月19日</span></footer>
   <a class="entry-link" aria-label="post link to BeyondCorp Enterprise用いて、GCPへアクセスは会社所有デバイスのみに制限" href="http://localhost:1313/posts/2021/device-restriction-by-beyondcorp/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>BigQueryロードする前の文字コード変換
+    <h2 class="entry-hint-parent">BigQueryロードする前の文字コード変換
     </h2>
   </header>
   <div class="entry-content">
     <p>背景 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ドキュメントには、下記の文言が含まれています。
 ...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2021-11-15 00:00:00 -0900 -0900&#39;&gt;2021年11月15日&lt;/span&gt;</footer>
+  <footer class="entry-footer"><span title='2021-11-15 00:00:00 -0900 -0900'>2021年11月15日</span></footer>
   <a class="entry-link" aria-label="post link to BigQueryロードする前の文字コード変換" href="http://localhost:1313/posts/2021/convert-encoding-before-bq-load/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>オンプレミス環境からGCSバケットにファイルのアップロード、最小権限の設定について
+    <h2 class="entry-hint-parent">オンプレミス環境からGCSバケットにファイルのアップロード、最小権限の設定について
     </h2>
   </header>
   <div class="entry-content">
     <p>背景 エンドユーザーはオンプレミス環境から GCS バケットへファイルアップロードしたいという要望がありますが、情報はこれだけで、直接に聞くのも難しかったです。 GCP プロジェクトは組織なしで作られていますが、Google Workspace を利用しているかどうか、Google アカウントを持っているかどうか、オンプレミス環境はどんな状況かなどなど、そういう要素に左右されないように、考えてみました。
 ...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2020-12-26 00:00:00 -0900 -0900&#39;&gt;2020年12月26日&lt;/span&gt;</footer>
+  <footer class="entry-footer"><span title='2020-12-26 00:00:00 -0900 -0900'>2020年12月26日</span></footer>
   <a class="entry-link" aria-label="post link to オンプレミス環境からGCSバケットにファイルのアップロード、最小権限の設定について" href="http://localhost:1313/posts/2020/upload-to-gcs-from-on-premise-with-polp/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>「Terraform」作成した GCE インスタンス中で、GitHub プライベートリポジトリからソースを落とす
+    <h2 class="entry-hint-parent">「Terraform」作成した GCE インスタンス中で、GitHub プライベートリポジトリからソースを落とす
     </h2>
   </header>
   <div class="entry-content">
     <p>背景 Terraform を利用して GCP などのリソースを簡単に apply・destroy できるから、必要となる時に、GCE インスタンスを作って、GitHub 上のプライベートリポジトリのソースをインスタンスで動かすという要望はありました。
 ...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2020-07-05 00:00:00 -0900 -0900&#39;&gt;2020年7月5日&lt;/span&gt;</footer>
+  <footer class="entry-footer"><span title='2020-07-05 00:00:00 -0900 -0900'>2020年7月5日</span></footer>
   <a class="entry-link" aria-label="post link to 「Terraform」作成した GCE インスタンス中で、GitHub プライベートリポジトリからソースを落とす" href="http://localhost:1313/posts/2020/github-clone-private-repo-to-gce-instance/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>家に帰ったら、玄関のライトを自動に付けたい
+    <h2 class="entry-hint-parent">家に帰ったら、玄関のライトを自動に付けたい
     </h2>
   </header>
   <div class="entry-content">
@@ -227,13 +225,13 @@
 揃ったもの SwitchBot: Amazon Link RaspberryPi 3 Nature Remo Google Cloud Platform Account LINE Developer Account IFTTT Account ---
 ...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2020-04-19 00:00:00 -0900 -0900&#39;&gt;2020年4月19日&lt;/span&gt;</footer>
+  <footer class="entry-footer"><span title='2020-04-19 00:00:00 -0900 -0900'>2020年4月19日</span></footer>
   <a class="entry-link" aria-label="post link to 家に帰ったら、玄関のライトを自動に付けたい" href="http://localhost:1313/posts/2020/auto-turn-on-light-by-ifttt-raspberry-pi/"></a>
 </article>
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2>Google Cloud Composer で Bigquery にロード時 「Error: Bad character (ASCII 0) encountered.」の回避策
+    <h2 class="entry-hint-parent">Google Cloud Composer で Bigquery にロード時 「Error: Bad character (ASCII 0) encountered.」の回避策
     </h2>
   </header>
   <div class="entry-content">
@@ -242,13 +240,14 @@
 回避策 調べたところ、取込 csv ファイルに「ヌル文字 - Wikipedia」が混入しました。
 ...</p>
   </div>
-  <footer class="entry-footer">&lt;span title=&#39;2020-02-25 00:00:00 -0900 -0900&#39;&gt;2020年2月25日&lt;/span&gt;</footer>
+  <footer class="entry-footer"><span title='2020-02-25 00:00:00 -0900 -0900'>2020年2月25日</span></footer>
   <a class="entry-link" aria-label="post link to Google Cloud Composer で Bigquery にロード時 「Error: Bad character (ASCII 0) encountered.」の回避策" href="http://localhost:1313/posts/2020/avoid-ascii-0-error-cloud-composer/"></a>
 </article>
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="http://localhost:1313/">TimLeaf</a></span>
+        <span>&copy; 2024 <a href="http://localhost:1313/">TimLeaf</a></span> · 
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

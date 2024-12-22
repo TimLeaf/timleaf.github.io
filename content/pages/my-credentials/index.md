@@ -11,3 +11,5 @@ tag:
 {{< figure src="./images/cloud_architect.png" title="Professional Cloud Architect" link="https://www.credential.net/0efdf7d9-8903-4cce-96a5-cc9c3ec5f365" class="my_credentials" >}}
 
 {{< figure src="./images/cloud_engineer.png" title="Associate Cloud Engineer" link="https://www.credential.net/fe1304e4-64ac-4550-9391-1bc2e9e5a01e" class="my_credentials" >}}
+
+{{< figure src="./images/data_practitioner.png" title="Associate Data Practitioner" link="https://www.credential.net/944906cd-840b-4d2c-a188-4423c56a9a21?username=18509" class="my_credentials" >}}

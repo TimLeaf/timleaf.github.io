@@ -11,9 +11,7 @@
 Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な注意点がありますが、文字コードはそのひとつです。 公式ドキュメントには、下記の文言が含まれています。">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/posts/2021/convert-encoding-before-bq-load/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.b4022fd15822e5266604dee8edcac37b861d7460498995f217070f0a57e92ddf.css" integrity="sha256-tAIv0Vgi5SZmBN7o7crDe4YddGBJiZXyFwcPClfpLd8=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.f413e19d0714851f6474e7ee9632408e58ac146fbdbe62747134bea2fa3415e0.js" integrity="sha256-9BPhnQcUhR9kdOfuljJAjlisFG&#43;9vmJ0cTS&#43;ovo0FeA="
-    onload="hljs.initHighlightingOnLoad();"></script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.f3eccfe2c704a8ff50cfae909bfaab4c4868f68bc35c273e5ee6505b0f459bfa.css" integrity="sha256-8&#43;zP4scEqP9Qz66Qm/qrTEho9ovDXCc&#43;XuZQWw9Fm/o=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -39,7 +37,7 @@ Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な
                 --secondary: rgb(155, 156, 157);
                 --tertiary: rgb(65, 66, 68);
                 --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
+                --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
             }
@@ -100,8 +98,6 @@ Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
                 </button>
-                <ul class="lang-switch"><li>|</li>
-                </ul>
             </div>
         </div>
         <ul id="menu">
@@ -123,10 +119,10 @@ Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な
 <article class="post-single">
   <header class="post-header">
     
-    <h1 class="post-title">
+    <h1 class="post-title entry-hint-parent">
       BigQueryロードする前の文字コード変換
     </h1>
-    <div class="post-meta">&lt;span title=&#39;2021-11-15 00:00:00 -0900 -0900&#39;&gt;2021年11月15日&lt;/span&gt;
+    <div class="post-meta"><span title='2021-11-15 00:00:00 -0900 -0900'>2021年11月15日</span>
 
 </div>
   </header> 
@@ -154,7 +150,8 @@ Cloud Storage(GCS)からCSVデータをBigQueryに読み込む際は、様々な
     </main>
     
 <footer class="footer">
-    <span>&copy; 2024 <a href="http://localhost:1313/">TimLeaf</a></span>
+        <span>&copy; 2024 <a href="http://localhost:1313/">TimLeaf</a></span> · 
+
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
