@@ -4,7 +4,7 @@
     <title>List on TimLeaf</title>
     <link>http://localhost:1313/posts/</link>
     <description>Recent content in List on TimLeaf</description>
-    <generator>Hugo -- 0.137.1</generator>
+    <generator>Hugo -- 0.146.3</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 06 Nov 2024 00:00:00 -0900</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -32,8 +32,7 @@
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Dataflow now supports &lt;a href=&#34;https://cloud.google.com/dataflow/docs/guides/using-custom-containers&#34;&gt;custom containers&lt;/a&gt; in GA.
-※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。&lt;/p&gt;
-&lt;/blockquote&gt;
+※ このカスタム コンテナ機能は、Python で一般提供が開始されました。Java ではプレビューで利用できます。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;になってから、もうすぐ半年が経ちます。一方、初心者にやさしいBigQuery MLのクラスタリングはK平均法（k-means）のみサポートしています。DBSCANはk-meansより優れるように&lt;a href=&#34;https://scikit-learn.org/stable/auto_examples/cluster/plot_cluster_comparison.html#sphx-glr-auto-examples-cluster-plot-cluster-comparison-py&#34;&gt;見え&lt;/a&gt;ますので、Dataflowカスタムコンテナで回してみることにしました。&lt;/p&gt;</description>
     </item>
     <item>
@@ -97,8 +96,7 @@ GCP プロジェクトは組織なしで作られていますが、Google Worksp
       <description>&lt;h2 id=&#34;背景&#34;&gt;背景&lt;/h2&gt;
 &lt;p&gt;GoogleCloudStorageToBigQueryOperator を使った csv ファイルを Bigquery にロードする処理で、下記のエラーが発生しました。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;「Error while reading data, error message: Error detected while parsing row starting at position: XXX. Error: Bad character (ASCII 0) encountered.」&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;「Error while reading data, error message: Error detected while parsing row starting at position: XXX. Error: Bad character (ASCII 0) encountered.」&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;回避策&#34;&gt;回避策&lt;/h2&gt;
 &lt;p&gt;調べたところ、取込 csv ファイルに「&lt;a href=&#34;https://ja.wikipedia.org/wiki/%E3%83%8C%E3%83%AB%E6%96%87%E5%AD%97&#34;&gt;ヌル文字 - Wikipedia&lt;/a&gt;」が混入しました。&lt;/p&gt;</description>
     </item>

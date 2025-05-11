@@ -4,7 +4,7 @@
     <title>Pages on TimLeaf</title>
     <link>http://localhost:1313/pages/</link>
     <description>Recent content in Pages on TimLeaf</description>
-    <generator>Hugo -- 0.137.1</generator>
+    <generator>Hugo -- 0.146.3</generator>
     <language>ja</language>
     <atom:link href="http://localhost:1313/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -12,21 +12,27 @@
       <link>http://localhost:1313/pages/my-credentials/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/pages/my-credentials/</guid>
-      <description>&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credential.net/f811917b-a60e-4a65-8c11-f3c800881e9f&#34;&gt;
+      <description>&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credly.com/badges/a338a73e-c218-44f0-930d-d506f3a88802/public_url&#34;&gt;
     &lt;img loading=&#34;lazy&#34; src=&#34;./images/data_engineer.png&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
             Professional Data Engineer
         &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credential.net/0efdf7d9-8903-4cce-96a5-cc9c3ec5f365&#34;&gt;
+&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credly.com/badges/36797865-c999-48fa-8815-563da74fd899/public_url&#34;&gt;
     &lt;img loading=&#34;lazy&#34; src=&#34;./images/cloud_architect.png&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
             Professional Cloud Architect
         &lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credential.net/fe1304e4-64ac-4550-9391-1bc2e9e5a01e&#34;&gt;
+&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credly.com/badges/b7bacec3-22ea-484d-93a3-7b5a4270cf77/public_url&#34;&gt;
     &lt;img loading=&#34;lazy&#34; src=&#34;./images/cloud_engineer.png&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
             Associate Cloud Engineer
+        &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&#34;my_credentials&#34;&gt;&lt;a href=&#34;https://www.credly.com/badges/0b505c03-23e0-4505-b03a-d9d916a8d4fc/public_url&#34;&gt;
+    &lt;img loading=&#34;lazy&#34; src=&#34;./images/data_practitioner.png&#34;/&gt; &lt;/a&gt;&lt;figcaption&gt;
+            Associate Data Practitioner
         &lt;/figcaption&gt;
 &lt;/figure&gt;</description>
     </item>
